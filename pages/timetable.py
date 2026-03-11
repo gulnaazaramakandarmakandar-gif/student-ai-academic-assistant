@@ -2,11 +2,26 @@ import streamlit as st
 import pandas as pd
 import base64
 
+# MUST be the first Streamlit command
 st.set_page_config(page_title="Timetable", layout="centered")
+
+# -------------------------
+# Hide Sidebar
+# -------------------------
+
+hide_sidebar = """
+<style>
+[data-testid="stSidebar"] {display:none;}
+[data-testid="stSidebarNav"] {display:none;}
+</style>
+"""
+
+st.markdown(hide_sidebar, unsafe_allow_html=True)
 
 # -------------------------
 # Background Function
 # -------------------------
+
 def set_bg(image_file):
 
     with open(image_file, "rb") as img:

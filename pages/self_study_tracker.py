@@ -26,6 +26,17 @@ def set_bg(image_file):
     st.markdown(page_bg, unsafe_allow_html=True)
 
 
+def hide_sidebar():
+
+    hide = """
+    <style>
+    [data-testid="stSidebar"] {display: none;}
+    [data-testid="stSidebarNav"] {display: none;}
+    </style>
+    """
+
+    st.markdown(hide, unsafe_allow_html=True)
+
 # Apply background
 set_bg("assets/background.jpg")
 

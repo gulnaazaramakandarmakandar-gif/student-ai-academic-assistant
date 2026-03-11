@@ -4,7 +4,18 @@ import os
 import base64
 
 st.set_page_config(page_title="Notifications", layout="centered")
+import streamlit as st
 
+def hide_sidebar():
+
+    hide = """
+    <style>
+    [data-testid="stSidebar"] {display: none;}
+    [data-testid="stSidebarNav"] {display: none;}
+    </style>
+    """
+
+    st.markdown(hide, unsafe_allow_html=True)
 # -------------------------
 # Background Function
 # -------------------------
